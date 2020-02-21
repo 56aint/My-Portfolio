@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div>
+    <h3>Contact G-Thang?</h3>
+    <form action="/my-handling-form-page" method="post">
+      <ul>
+        <li>
+        <label for="name" id="name"> Name:</label>
+        <input class="input" type="text" placeholder="Please Enter Your Name" id="name" name="user_name" required>
+        </li>
+        <li>
+          <label for="mail" id="email">E-mail:</label>
+          <input class="input" type="email" placeholder="Please Enter Your E-mail" id="mail" name="user_mail" required>
+        </li>
+          <label for="msg" id="Message">Message:</label>
+        <textarea class="input" placeholder="Please Enter Your Message Here" id="msg" name="user_message"></textarea>
+      </ul>
+      <div>
+        <input id="submit-button" type="submit" value="Submit" onclick="myFunction()">
+        <input id="reset-button" type="reset" value="Reset" onclick="myFunctionTwo()"> 
+        <p id="poptext"></p>
+      </div>
+        <script>
+          document.getElementById("submit-button").addEventListener("click", function myFunction() {
+            let txt;
+            if (confirm("Please Click ok to Send Your Message!")) {
+              txt = "Thank You, Your Message Has been Sent!";
+            } else {
+              txt = "Sending Failed!";
+            }
+            document.getElementById("poptext").innerText = txt;
+          });
+          </script>
+          <script>
+            document.getElementById("reset-button").addEventListener("click", function myFunctionTwo() {
+              let txtTwo;
+              if (confirm("Please Click ok Erase Contact Form!")) {
+                txtTwo = "Form Wiped Successfully!";
+              } else {
+                txt = "Plese Continue!";
+              }
+              document.getElementById("poptext").innerText = txtTwo;
+            });
+            </script>
+    </form>
+  </div>
+  
+</body>
+</html>
