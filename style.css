@@ -1,4 +1,9 @@
 
+ body {
+  /*background-color: whitesmoke;*/
+  background: linear-gradient(35deg, #CCFFFF, #FFCCCC, rgb(204, 204, 255));
+  padding: 50px;
+}
  header {
   background-color: hsl(300, 90%, 35%);
   color: #FFFFFF;
@@ -14,30 +19,38 @@ h2 {
 }
 
 nav ul {
+  list-style-type: none;
   margin: 0px;
   padding: 5px 0px 5px 30px;
   background: linear-gradient(90deg, red, grey, rgb(204, 204, 255));
 }
 
 nav li {
+  list-style-type: none;
   display: inline;
   margin-right: 20px;
+  font-family: 'Oswald', sans-serif;
+  
+  font-size: 1.2em;
+  line-height: 40px;
+  /*height: 40px;*/
+  border-bottom: 1px solid #888;
+}
+
+#first-work {
+    float: right;
 }
 
 a {
   text-decoration: none;
   color: inherit;
 }
-body {
-  /*background-color: whitesmoke;*/
-  background: linear-gradient(35deg, #CCFFFF, #FFCCCC, rgb(204, 204, 255));
-  padding: 50px;
-}
+
 h4 {
   color: white;
   font-family: sans-serif;
   text-align: center;
-  font-size: 40px;
+  font-size: 14px;
   background: linear-gradient(90deg, grey, red, rgb(204, 204, 255));
 }
 
@@ -67,9 +80,22 @@ a:hover {
   /*flex-shrink: 8;
   flex-grow: 2;*/
   
-  /*flex-wrap: wrap;*/
+  /*flex-wrap: wrap;*/  
+}
+
+
+.mypicture {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+.my-message {
   
 }
+
+
 .section {
   float: left;
   width: 60%;
@@ -234,4 +260,64 @@ input[type=reset]:hover {
   100% {
     background-color: red;
   }
+}
+
+.card {
+  width: 450px;
+  height: 600px;                 /* Set width of cards */
+  display: flex;                /* Children use Flexbox */
+  flex-direction: column;       /* Rotate Axis */
+  border: 1px solid #EF9A9A;    /* Set up Border */
+  border-radius: 4px;           /* Slightly Curve edges */
+  overflow: hidden;             /* Fixes the corners */
+  margin: 20px;                  /* Add space between cards */
+}
+.div-container {
+  display: flex;
+  flex-direction: row;     /* Rotate Axis to Vertical */
+  justify-content: space-between;    /* Group Children in Center */
+  align-items: center;
+}
+
+.div-message {
+  display: flex;
+  flex-direction: column;     /* Rotate Axis to Vertical */
+  justify-content: stretch;    /* Group Children in Center */
+  align-items: center;
+}
+
+.div-scrapbook {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 1;   /* Group Children in Center */
+  margin: 0;
+}
+
+/*.scrap-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}*/
+
+.scrap-box *{
+  margin: 0;
+}
+
+.card-header {
+  color: #D32F2F;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #EF9A9A;
+  background-color: #FFEBEE;
+  padding: 5px 10px;
+}
+
+.card-main {
+  display: flex;              /* Children use Flexbox */
+  flex-direction: column;     /* Rotate Axis to Vertical */
+  justify-content: center;    /* Group Children in Center */
+  align-items: center;        /* Group Children in Center (on cross axis) */
+  padding: 15px 0;            /* Add padding to the top/bottom */
 }
